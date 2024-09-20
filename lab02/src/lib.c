@@ -25,6 +25,9 @@ const char *get_animal_type_name(enum animal_type type)
 	case PIG:
 		result = "Свиня";
 		break;
+	case HUMAN:
+		result = "людина";
+		break;
 	default:
 		result = "N/A";
 	}
@@ -44,4 +47,6 @@ void show_animals(struct animal animals[], unsigned int count)
 		printf("Інформація про тварину №%02u: ", i + 1);
 		printf("%s: зріст = %u см, маса = %u гр. \n", get_animal_type_name(animals[i].type), animals[i].height, animals[i].weight);
 	}
+}
+
 }
